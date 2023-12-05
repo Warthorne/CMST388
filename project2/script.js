@@ -47,10 +47,23 @@ function submitForm() {
     }
 
     // Check at least two contact methods are chosen
-    var selectedContactMethods = document.querySelectorAll('#contact input[name="contactMethod"]:checked');
+    var selectedContactMethods = document.querySelectorAll('#contact input[name="contactMethod"]:checked ');
     if (selectedContactMethods.length < 2) {
         errors.push("Select at least two contact methods");
     }
+
+    // Check if favorite is chosen
+    var selectedPokemon = document.getElementById('whichPokemon').value;
+    if (selectedPokemon === "") {
+        errors.push("Select a Pokemon");
+    }
+
+    // Check if favorite is written
+    var favoritePokemonGame = document.getElementById('favoritePokemonGame').value;
+    if (favoritePokemonGame.trim() === "") {
+        errors.push("Enter your favorite Pokemon game");
+    }
+
 
     // Display or use the errors array as needed
     if (errors.length > 0) {
@@ -66,6 +79,7 @@ function submitForm() {
 }
 
 function resetForm() {
+    // No need to remove error messages for this approach
 
     document.getElementById("userInfoForm").reset();
 }

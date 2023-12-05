@@ -8,7 +8,10 @@
 </head>
 <body>
     <header>
-    <h1>Pokemon Registration Form</h1>
+        <img src="img/storelogo.jpeg" alt="Top Left Image" class="corner-image top-left">
+        <h1>Pokemon Registration Form</h1>
+        <img src="img/storelogo.jpeg" alt="Top Right Image" class="corner-image top-right">
+
     </header>
     <main>
         <section class="gallery">
@@ -97,10 +100,27 @@
 
         <!-- Email Address -->
         <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" placeholder="Enter email" autocomplete="on" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"><br>
+        <input type="email" id="email" name="email" placeholder="Enter email" autocomplete="on" ><br>
 
         <label for="confirmEmail">Confirm Email Address:</label>
-        <input type="email" id="confirmEmail" name="confirmEmail" placeholder="Confirm email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"><br>
+        <input type="email" id="confirmEmail" name="confirmEmail" placeholder="Confirm email" ><br>
+
+        <!-- Pick Pokemon -->
+
+        <label for="whichPokemon">Choose your First Pokemon:</label>
+        <select id="whichPokemon" name="whichPokemon" required>
+            <option value="" disabled selected>Select a Pokemon</option>
+            <option value="pikachu">Pikachu</option>
+            <option value="charmander">Charmander</option>
+            <option value="bulbasaur">Bulbasaur</option>
+            <option value="bulbasaur">Squirtle</option>
+        </select>
+
+        <!-- Favorite Pokemon -->
+
+        <label for="favoritePokemonGame">Favorite Pokemon Game:</label>
+        <input type="text" id="favoritePokemonGame" name="favoritePokemonGame" placeholder="Enter your favorite Pokemon game" onfocus="clearDefault(this)">
+
 
         <!-- Meal Preference -->
         <label for="mealPref">Meal Preference:</label>

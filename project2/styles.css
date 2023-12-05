@@ -6,6 +6,10 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
+    background-image: url('img/pokemon.jpeg');
+    background-size: cover;
+    background-position: center;
+
 }
 
 header, footer {
@@ -14,7 +18,27 @@ header, footer {
     padding: 10px;
     text-align: center;
     width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
+
+.corner-image {
+    position: absolute;
+    width: 100px; /* Adjust the width of your corner image */
+    }
+
+.corner-image.top-left {
+    top: 10px;
+    left: 10px;
+}
+
+.corner-image.top-right {
+    top: 10px;
+    right: 10px;
+}
+
 
 .gallery {
     display: flex;
@@ -42,12 +66,17 @@ footer {
 }
 
 h2 {
+    z-index: 1;
+}
+
+h2 {
     color: #000000;
 }
 
 form {
     background-color: #fff;
     padding: 20px;
+    margin: 20px;
     border: 8px solid blue;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -107,3 +136,11 @@ button {
     padding: 10px;
     margin-top: 10px;
 }
+
+        /* Media Query for Mobile */
+        @media (max-width: 600px) {
+            .corner-image {
+                width: 30px; /* Adjust the width of your corner image for mobile */
+                height: 30px; /* Adjust the height of your corner image for mobile */
+            }
+        }
