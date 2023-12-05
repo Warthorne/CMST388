@@ -66,7 +66,6 @@ function submitForm() {
 }
 
 function resetForm() {
-    // No need to remove error messages for this approach
 
     document.getElementById("userInfoForm").reset();
 }
