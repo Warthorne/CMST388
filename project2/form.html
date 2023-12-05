@@ -95,9 +95,9 @@
 
             <div class="phoneNumber-child"><input type="text" id="areaCode" name="areaCode" placeholder="Area code" required pattern="[0-9]{3}"></div>
             
-            <div class="phoneNumber-child"></div><input type="text" id="phoneNumber" name="phoneNumber" placeholder="Phone number" required pattern="[0-9]{7}"></div>
+            <div class="phoneNumber-child"></div><input type="text" id="phoneNumber" name="phoneNumber" placeholder="Phone number" required pattern="[0-9]{7}">
         </div>
-
+        
         <!-- Email Address -->
         <label for="email">Email Address:</label>
         <input type="email" id="email" name="email" placeholder="Enter email" autocomplete="on" ><br>
@@ -123,19 +123,19 @@
 
 
         <!-- Meal Preference -->
-        <label for="mealPref">Meal Preference:</label>
+        <label for="mealPreference">Meal Preference:</label>
         <div class="form-group">
             <div class="radio-group">
 
-                <input type="radio" id="classic" name="mealPreference" value="Classic" required>
-                <label for="classic">Classic</label>
-                
-                <input type="radio" id="vegan" name="mealPreference" value="Vegan" required>
                 <label for="vegan">Vegan</label>
-
-                <input type="radio" id="vegetarian" name="mealPreference" value="Vegetarian" required>
-                <label for="vegetarian">Vegetarian</label><br>
-
+                <input type="radio" id="vegan" name="mealPreference" value="vegan" required>
+        
+                <label for="vegetarian">Vegetarian</label>
+                <input type="radio" id="vegetarian" name="mealPreference" value="vegetarian" required>
+        
+                <label for="nonVegetarian">Non-Vegetarian</label>
+                <input type="radio" id="nonVegetarian" name="mealPreference" value="nonVegetarian" required>
+        
             </div>
         </div><br>
 
@@ -146,11 +146,11 @@
         <div class="form-group">
         <div class="radio-group" id="contact">
 
-        <input type="checkbox" id="emailContact" name="contactMethod" value="Email">
-        <label for="emailContact">Email</label>
+        <label for="emailCheckbox">Email</label>
+        <input type="checkbox" id="emailCheckbox" name="contactMethod" value="email" required>
 
-        <input type="checkbox" id="phoneContact" name="contactMethod" value="Phone">
-        <label for="phoneContact">Phone</label>
+        <label for="phoneCheckbox">Phone</label>
+        <input type="checkbox" id="phoneCheckbox" name="contactMethod" value="phone" required>
 
         <input type="checkbox" id="mailContact" name="contactMethod" value="Mail">
         <label for="mailContact">Mail</label>
@@ -162,7 +162,7 @@
 
         <!-- Comments -->
         <label for="comments">Comments (Optional):</label>
-        <textarea class="resize" rows="10" cols="40" name="comments"  ></textarea><br>
+        <textarea class="resize" rows="10" cols="40" id="comments" name="comments"  ></textarea><br>
 
         <!-- Buttons -->
         <button type="submit">Submit</button>
