@@ -10,53 +10,63 @@ function isValidEmail(email) {
     return emailRegex.test(email);
 }
 
-function showError(element, message) {
-    // Display an error message next to the given form element
-    var errorDiv = document.createElement('div');
-    errorDiv.className = 'error-message';
-    errorDiv.innerHTML = message;
-
-    // Insert the error message after the form element
-    element.parentNode.insertBefore(errorDiv, element.nextSibling);
+function showError(message) {
+    // Display an error message in a popup
+    alert(message);
 }
 
-function removeErrorMessages() {
-    // Remove all error messages
-    var errorMessages = document.getElementsByClassName('error-message');
-    while (errorMessages.length > 0) {
-        errorMessages[0].parentNode.removeChild(errorMessages[0]);
+function showAllErrors(errors) {
+    // Display all accumulated error messages in a popup
+    if (errors.length > 0) {
+        alert("Errors:\n" + errors.join("\n"));
     }
 }
 
-function submitForm() {
-     // Remove existing error messages
-     removeErrorMessages();
+function removeErrorMessages() {
+    // No need to remove error messages for this approach
+}
 
+function submitForm() {
+    // Remove existing error messages
+    removeErrorMessages();
+
+    // Add your form validation logic here
+    var errors = [];
+    
     var email = document.getElementById('email').value;
     var confirmEmail = document.getElementById('confirmEmail').value;
 
     // Check if email and confirm email match
     if (email !== confirmEmail) {
-        showError(document.getElementById('confirmEmail'), "Email and Confirm Email do not match");
-        return false; // Prevent form submission
+        errors.push("Email and Confirm Email do not match");
     }
 
     // Check if the email is in a valid format
     if (!isValidEmail(email)) {
-        showError(document.getElementById('email'), "Invalid email format");
+        errors.push("Invalid email format");
+    }
+
+    // Check at least two contact methods are chosen
+    var selectedContactMethods = document.querySelectorAll('#contact input[name="contactMethod"]:checked');
+    if (selectedContactMethods.length < 2) {
+        errors.push("Select at least two contact methods");
+    }
+
+    // Display or use the errors array as needed
+    if (errors.length > 0) {
+        showAllErrors(errors);
         return false; // Prevent form submission
     }
 
-
+    // Example: Displaying an alert for testing
     alert("Form submitted successfully!");
 
-    // Prevent the form from submitting
+    // Returning false to prevent the form from actually submitting in this example
     return false;
- }
+}
 
 function resetForm() {
-     // Remove existing error messages when resetting the form
-     removeErrorMessages();
+    // No need to remove error messages for this approach
 
     document.getElementById("userInfoForm").reset();
 }
