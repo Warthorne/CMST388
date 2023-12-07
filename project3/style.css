@@ -3,8 +3,9 @@ body {
   margin: 0;
   padding: 0;
   background-image: url('/img/background.jpg');   /*https://as2.ftcdn.net/v2/jpg/00/84/79/55/1000_F_84795519_nLtGcBu3lXkg8H4zmhInmhXNp9CZOTp1.jpg*/ 
-  background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 }
 
 header {
