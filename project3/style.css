@@ -77,3 +77,14 @@ button:hover {
 .error {
   color: red;
 }
+
+#imageSection {
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+#imageSection img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* Add rounded corners to the image */
+}
