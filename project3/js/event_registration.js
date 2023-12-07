@@ -24,13 +24,7 @@
 
     if (popup) {
       location.reload();
-    } else {
-      // Register the beforeunload event to show the confirmation message when leaving the page
-      window.addEventListener('beforeunload', function (event) {
-        const confirmationMessage = 'You have not made a choice. Are you sure you want to leave?';
-        event.returnValue = confirmationMessage;
-      });
-    }
+    } 
   }
 
   // Utility function to change background color and show/hide sections
@@ -64,7 +58,7 @@
       totalSection.style.display = 'block';
       contactInfoSection.style.display = 'block';
 
-      const totalPrice = parseFloat(ticketQuantity) * 10.00; // Assuming ticket cost is $10 each
+      const totalPrice = parseFloat(ticketQuantity) * 10.00; 
       document.getElementById('totalPrice').innerText = `Total Price: $${totalPrice.toFixed(2)}`;
     }
 
@@ -117,13 +111,8 @@
       document.getElementById('emailError').innerText = '';
       document.getElementById('complete').innerText = 'THANK YOU FOR YOUR PURCHASE! SEE YOU THERE!';
       const ticketQuantity = document.getElementById('ticketQuantity').value;
-      const totalAmount = parseFloat(ticketQuantity) * 10.00; // Assuming ticket cost is $10 each
+      const totalAmount = parseFloat(ticketQuantity) * 10.00; 
       alert(`Thank you for your purchase!\nTotal Amount: $${totalAmount.toFixed(2)}`);
 
     }
   }
-
-  
-
-  
-  
