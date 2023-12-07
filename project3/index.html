@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="js/event_registration.js"></script>
+
+
+  <title>Event Registration</title>
+</head>
+
+<body>
+
+  <header>
+    <h1>DMWT Alumni Event Registration</h1>
+  </header>
+
+  <main>
+    <div class="welcome-section">
+      <p><strong>Welcome to the DMWT Alumni Event!</strong></p>
+      <p>Greetings DMWT Alumni,</p>
+      <p>We are excited to invite you to this years Alumi Event!</p>
+      <p>We will be hosting the first ever Pokemon Battle Event! Get ready to unleash your Pokemon, challenge fellow trainers, and experience the thrill of epic battles. Whether you're a seasoned Pokemon Master or just starting your journey, this event is an opportunity to showcase your skills, meet other trainers, and relive the excitement of Pokemon battles.</p></p>
+      <p>Event Details:</p>
+      <p>Date: February 11, 2024</p>
+      <p>Location: Pallet Town, USA</p>
+      <p>Time: Starting at 9am until complete!</p>
+      <p>Costume Contest: Dress up as your favorite Pokemon for a chance to win exciting prizes!</p>
+      <p>Ticket Information:
+        - Price: $10.00 (Maximum of 3 tickets per purchase)</p>
+      <p>Join us for an unforgettable day of Pokemon battles, camaraderie, and nostalgia. Get your tickets now and let the Pokemon adventure begin!</p>
+      <p>See you at the Pokemon Arena!</p>
+      <p>Best regards,<br>Professor Oak</p>
+    </div>  
+
+    <div class="ticket-section">
+
+      <p>Buy your tickets quick, you only have <span id="countdown" class="countdown">10:00</span> mins!!!</p>
+      <span id="countExpire" class="countExpire"></span>
+
+      <div>
+        <label for="ticketQuantity">Number of Tickets (1-3):</label>
+        <input type="text" id="ticketQuantity">
+        <span id="ticketError" class="error"></span>
+        <button onclick="calculateTotal()">Calculate Total</button>
+        <button onclick="resetForm()">Reset Form</button>
+
+      </div>
+
+      <div id="totalSection" style="display:none;">
+        <p id="totalPrice"></p>
+      </div>
+
+      <div id="contactInfo" style="display:none;">
+        <label for="name">Name:</label>
+        <input type="text" id="name" autocomplete="name">
+        <span id="nameError" class="error"></span>
+
+        <br>
+        <label for="email">Email:</label>
+        <input type="text" id="email" autocomplete="email">
+        <span id="emailError" class="error"></span>
+
+        <br>
+        <button onclick="completePurchase()">Complete Purchase</button>
+        <br>
+
+        <span id="complete" class="countExpire"></span>
+      
+
+      </div>
+    </div>  
+  </main>
+</body>
+  
+</html>
